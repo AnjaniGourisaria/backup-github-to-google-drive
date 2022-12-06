@@ -2,4 +2,4 @@ from google.colab import drive
 drive.mount('/github')
 %cd MyDrive/github
 %ls -larh
-!git clone https://<Token>:x-oauth-basic@github.com/<Username>/<RepoName>.git
+#!git clone https://<Token>:x-oauth-basic@github.com/<Username>/<RepoName>.git
