@@ -1,0 +1,19 @@
+import os
+from google.colab import drive
+from github import Github
+
+#Mounting Goolge drive
+%cd /content
+drive.mount('github')
+%mkdir github/
+%cd github/MyDrive/github
+%bash
+%ls -larh && pwd
+
+# Getting Cloned
+access_token="Token"
+User="Username"
+g = Github(access_token)
+for repo in g.get_user().get_repos():
+    os.system("git clone https://"+access_token+":x-oauth-basic@github.com/"+User+"/"+repo.name+".git\n")
+
